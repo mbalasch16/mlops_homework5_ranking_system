@@ -71,5 +71,3 @@ app.include_router(query.router)
         
 
 
-# === Include other modular routes ===
-#app.include_router(query.router)
