@@ -50,24 +50,24 @@ app.include_router(query.router)
 #     return get_similar_responses(request.prompt, df, index, request.top_k)
 
 
-class ExcerptRequest(BaseModel):
-    excerpt: str
-    top_k: int = 5
+# class ExcerptRequest(BaseModel):
+#     excerpt: str
+#     top_k: int = 5
     
-# === Response Model ===
-class SimilarResponse(BaseModel):
-    excerpt: str
-    #excerpt: str
-    #response: str
-    score: float
+# # === Response Model ===
+# class SimilarResponse(BaseModel):
+#     excerpt: str
+#     #excerpt: str
+#     #response: str
+#     score: float
 
-@app.post("/similar", response_model=List[SimilarResponse])
-def similar_excerpt(request: ExcerptRequest):
-    print(request)
+# @app.post("/similar", response_model=List[SimilarResponse])
+# def similar_excerpt(request: ExcerptRequest):
+#     print(request)
     
-    # return request.prompt
-    responses = get_similar_responses(request.excerpt, request.top_k)
-    return [SimilarResponse(**resp) for resp in responses]
+#     # return request.prompt
+#     responses = get_similar_responses(request.excerpt, request.top_k)
+#     return [SimilarResponse(**resp) for resp in responses]
         
 
 
