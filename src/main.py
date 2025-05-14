@@ -49,7 +49,7 @@ app.include_router(query.router)
 # async def similar_prompts(request: PromptRequest):
 #     return get_similar_responses(request.prompt, df, index, request.top_k)
 
-
+#content to remove no need to add this model here
 # class ExcerptRequest(BaseModel):
 #     excerpt: str
 #     top_k: int = 5
